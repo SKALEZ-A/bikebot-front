@@ -4,7 +4,7 @@ import AboutSection from './components/sections/AboutSection';
 import CapabilitiesSection from './components/sections/CapabilitiesSection';
 import GettingStartedSection from './components/sections/GettingStartedSection';
 import TeamSection from './components/sections/TeamSection';
-import CommunitySection from './components/sections/CommunitySection';
+// import CommunitySection from './components/sections/CommunitySection';
 import SocialSection from './components/sections/SocialSection';
 
 function App() {
@@ -37,7 +37,6 @@ function App() {
   return (
     <div className="min-h-screen bg-figma-black">
       <HeroSection
-        title="Easy Interaction With Monad Using Bikebot"
         subtitle="Join 30,000+ folks to enjoy super-fast swaps on monad chain on BikeBot"
         ctaText="Start Trading on Monad with Ease"
         onCtaClick={handleCtaClick}
@@ -71,10 +70,9 @@ function App() {
         title="Team Is Cooking More Features..."
       />
 
-      <CommunitySection
-        title="Built for the Monad Community"
+      {/* <CommunitySection
         description="BikeBot is made for the Monad community by builders who believe in speed, efficiency, and decentralization. As Monad grows, so will BikeBot. With deeper features, mainnet support, and multi-platform access coming soon."
-      />
+      /> */}
 
       <SocialSection
         title="Meet the worldwide community."

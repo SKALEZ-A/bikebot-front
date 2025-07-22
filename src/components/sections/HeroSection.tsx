@@ -1,14 +1,12 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 interface HeroSectionProps {
-  title: string;
   subtitle: string;
   ctaText: string;
   onCtaClick: () => void;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
-  title,
   subtitle,
   ctaText,
   onCtaClick
