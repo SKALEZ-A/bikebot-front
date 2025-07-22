@@ -1,0 +1,315 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles for smooth scrolling and accessibility */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    line-height: 1.5;
+  }
+  
+  /* Focus styles for accessibility */
+  *:focus {
+    outline: 2px solid #45236A;
+    outline-offset: 2px;
+  }
+  
+  /* Keyboard navigation support */
+  .keyboard-navigation *:focus {
+    outline: 2px solid #45236A;
+    outline-offset: 2px;
+  }
+}
+
+/* Component styles */
+@layer components {
+  /* Figma-specific gradient text utility */
+  .text-figma-gradient {
+    background: linear-gradient(180deg, #FFFFFF 0%, #666666 57.69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Figma button styles */
+  .btn-figma-primary {
+    @apply bg-figma-monad-purple hover:bg-figma-monad-purple/90 text-figma-white px-8 py-4 rounded-figma-button shadow-figma-button transition-all duration-300;
+  }
+  
+  .btn-figma-secondary {
+    @apply bg-figma-orange hover:bg-figma-orange/90 text-figma-white px-6 py-3 rounded-figma-button transition-all duration-300;
+  }
+  
+  /* Figma card styles */
+  .card-figma {
+    @apply bg-figma-dark-card rounded-figma-card shadow-figma-card border border-figma-text-secondary/10;
+  }
+  
+  /* Section spacing utilities */
+  .section-spacing {
+    @apply py-figma-container-y;
+  }
+  
+  .container-spacing {
+    @apply px-4 md:px-8 lg:px-16 xl:px-figma-container-x;
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  /* Smooth scrolling for anchor links */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+  
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Figma-specific blur utilities */
+  .blur-figma-large {
+    filter: blur(500px);
+  }
+  
+  .blur-figma-medium {
+    filter: blur(20px);
+  }
+  
+  .blur-figma-small {
+    filter: blur(7.3px);
+  }
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    line-height: 1.6;
+  }
+}
+
+@layer components {
+  /* Text gradient utilities */
+  .text-gradient-figma {
+    background: linear-gradient(180deg, #FFFFFF 0%, #666666 57.69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Custom button styles */
+  .btn-primary {
+    @apply bg-figma-monad-purple hover:bg-figma-monad-purple/90 text-figma-white px-8 py-4 rounded-figma-button shadow-figma-button transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-figma-orange hover:bg-figma-orange/90 text-figma-white px-6 py-3 rounded-figma-button transition-all duration-300;
+  }
+
+  /* Custom card styles */
+  .card-primary {
+    @apply bg-figma-dark-card rounded-figma-card p-6 shadow-figma-card;
+  }
+
+  .card-feature {
+    @apply rounded-figma-card p-8 shadow-figma-feature transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  /* Custom blur utilities */
+  .blur-figma-large {
+    filter: blur(500px);
+  }
+  
+  .blur-figma-medium {
+    filter: blur(20px);
+  }
+  
+  .blur-figma-small {
+    filter: blur(7.3px);
+  }
+  
+  /* Animation utilities */
+  .animate-float-slow {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-float-fast {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Curved text animations for feature tags */
+  .animate-curve-left {
+    animation: curveText 4s ease-in-out infinite;
+  }
+  
+  .animate-curve-right {
+    animation: curveTextReverse 4s ease-in-out infinite;
+  }
+  
+  /* Text selection styling */
+  ::selection {
+    background-color: #FC7B0D;
+    color: #FFFFFF;
+  }
+
+  ::-moz-selection {
+    background-color: #FC7B0D;
+    color: #FFFFFF;
+  }
+  
+  /* Keyboard navigation focus styles */
+  .keyboard-navigation *:focus {
+    outline: 2px solid #45236A;
+    outline-offset: 2px;
+  }
+}
+
+/* Custom keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes figmaFloat {
+  0%, 100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes figmaPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(252, 130, 23, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(252, 130, 23, 0.8);
+  }
+}
+
+/* Curved text effects for feature tags */
+@keyframes curveText {
+  0% {
+    transform: rotate(-8deg) scale(1);
+  }
+  50% {
+    transform: rotate(-6deg) scale(1.02);
+  }
+  100% {
+    transform: rotate(-8deg) scale(1);
+  }
+}
+
+@keyframes curveTextReverse {
+  0% {
+    transform: rotate(12deg) scale(1);
+  }
+  50% {
+    transform: rotate(14deg) scale(1.02);
+  }
+  100% {
+    transform: rotate(12deg) scale(1);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1B083A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #45236A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FC7B0D;
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 768px) {
+  .text-figma-h1 {
+    font-size: 48px;
+  }
+  
+  .text-figma-h2 {
+    font-size: 48px;
+  }
+  
+  .text-figma-h3 {
+    font-size: 42px;
+  }
+  
+  .text-figma-h4 {
+    font-size: 32px;
+  }
+  
+  .text-figma-social {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-figma-h1 {
+    font-size: 36px;
+  }
+  
+  .text-figma-h2 {
+    font-size: 36px;
+  }
+  
+  .text-figma-h3 {
+    font-size: 32px;
+  }
+  
+  .text-figma-social {
+    font-size: 48px;
+  }
+}

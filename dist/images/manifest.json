@@ -1,0 +1,65 @@
+{
+  "version": "1.0.0",
+  "generated": "2025-07-18T23:41:12.555Z",
+  "images": {
+    "hero-background.png": {
+      "original": "hero-background.png",
+      "optimized": "hero-background-56586a.png",
+      "description": "Hero section gradient background",
+      "sizes": "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw",
+      "format": "png",
+      "srcset": "hero-background-56586a.png 1920w, hero-background-56586a.png 1440w, hero-background-56586a.png 1024w, hero-background-56586a.png 768w"
+    },
+    "monad-logo.png": {
+      "original": "monad-logo.png",
+      "optimized": "monad-logo-56586a.png",
+      "svg": "monad-logo.svg",
+      "description": "Monad blockchain logo",
+      "sizes": "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw",
+      "format": "svg",
+      "srcset": "monad-logo-56586a.png 64w, monad-logo-56586a.png 128w, monad-logo-56586a.png 256w"
+    },
+    "bikebot-logo.png": {
+      "original": "bikebot-logo.png",
+      "optimized": "bikebot-logo-460371.png",
+      "description": "BikeBot application logo",
+      "sizes": "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw",
+      "format": "png",
+      "srcset": "bikebot-logo-460371.png 32w, bikebot-logo-460371.png 64w, bikebot-logo-460371.png 128w"
+    },
+    "community-background.png": {
+      "original": "community-background.png",
+      "optimized": "community-background-59dff6.png",
+      "description": "Community section background",
+      "sizes": "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw",
+      "format": "png",
+      "srcset": "community-background-59dff6.png 1920w, community-background-59dff6.png 1440w, community-background-59dff6.png 1024w"
+    },
+    "telegram-interface.png": {
+      "original": "telegram-interface.png",
+      "optimized": "telegram-interface-figma.png",
+      "description": "Telegram bot interface mockup",
+      "sizes": "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw",
+      "format": "png",
+      "srcset": "telegram-interface-figma.png 1024w, telegram-interface-figma.png 768w, telegram-interface-figma.png 512w"
+    },
+    "step1-screenshot.png": {
+      "original": "step1-screenshot-figma.png",
+      "optimized": "step1-screenshot-figma.png",
+      "description": "Step 1 NFT minting process screenshot",
+      "sizes": "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw",
+      "format": "png",
+      "srcset": "step1-screenshot-figma.png 512w, step1-screenshot-figma.png 384w, step1-screenshot-figma.png 256w"
+    }
+  },
+  "optimization": {
+    "formats": [
+      "webp",
+      "png",
+      "svg"
+    ],
+    "quality": 85,
+    "progressive": true,
+    "responsive": true
+  }
+}
