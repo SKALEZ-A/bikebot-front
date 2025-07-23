@@ -8,7 +8,7 @@ interface TelegramSectionProps {
 
 const TelegramSection: React.FC<TelegramSectionProps> = () => {
   return (
-    <section className="relative min-h-[800px] lg:h-[1387px] bg-black overflow-hidden">
+    <section className="relative min-h-[800px] lg:h-[1387px] bg-black overflow-hidden mt-[8rem] ">
       {/* Background Image - exact Figma positioning */}
       <div className="absolute inset-0">
         <img

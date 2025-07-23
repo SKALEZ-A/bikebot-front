@@ -70,31 +70,51 @@ const CapabilitiesSection: React.FC<CapabilitiesSectionProps> = () => {
   // Using the exact padding values from the Figma layout
   const featureCards = [
     {
-      icon: "★",
+      icon: (
+        <svg width="63" height="61" viewBox="0 0 63 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M31.5 0L63 15.25V45.75L31.5 61L0 45.75V15.25L31.5 0Z" fill="#FC7B0D"/>
+        </svg>
+      ),
       color: "#FC7B0D", // Orange
       text: "View wallet balances",
       paddingLeft: "0px", // First card has no left padding
     },
     {
-      icon: "★",
+      icon: (
+        <svg width="63" height="61" viewBox="0 0 63 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M31.5 0L63 15.25V45.75L31.5 61L0 45.75V15.25L31.5 0Z" fill="#552396"/>
+        </svg>
+      ),
       color: "#552396", // Purple
       text: "Send & receive testnet tokens",
       paddingLeft: "100px", // Second card has 100px left padding
     },
     {
-      icon: "★",
+      icon: (
+        <svg width="63" height="61" viewBox="0 0 63 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M31.5 0L63 15.25V45.75L31.5 61L0 45.75V15.25L31.5 0Z" fill="#0EAD3A"/>
+        </svg>
+      ),
       color: "#0EAD3A", // Green
       text: "Interact with smart contracts",
       paddingLeft: "200px", // Third card has 200px left padding
     },
     {
-      icon: "★",
+      icon: (
+        <svg width="63" height="61" viewBox="0 0 63 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M31.5 0L63 15.25V45.75L31.5 61L0 45.75V15.25L31.5 0Z" fill="#000000"/>
+        </svg>
+      ),
       color: "#000000", // Black
       text: "Check transaction Status",
       paddingLeft: "300px", // Fourth card has 300px left padding
     },
     {
-      icon: "★",
+      icon: (
+        <svg width="63" height="61" viewBox="0 0 63 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M31.5 0L63 15.25V45.75L31.5 61L0 45.75V15.25L31.5 0Z" fill="#FFFFFF"/>
+        </svg>
+      ),
       color: "#FFFFFF", // White
       text: "Get Monad network stats",
       paddingLeft: "400px", // Fifth card has 400px left padding
@@ -167,7 +187,7 @@ const CapabilitiesSection: React.FC<CapabilitiesSectionProps> = () => {
                     <div
                       className="flex items-center gap-4 bg-[#16171A] rounded-[16px] py-3 px-4 mx-auto w-[95%]"
                     >
-                      <div className="flex-shrink-0 text-[18px] mr-2" style={{ color: card.color }}>
+                      <div className="flex-shrink-0 w-[32px] h-[30px] mr-2">
                         {card.icon}
                       </div>
                       <span className="text-[16px] text-[#FAFAFA] font-normal">
@@ -188,7 +208,7 @@ const CapabilitiesSection: React.FC<CapabilitiesSectionProps> = () => {
                           boxShadow: 'inset 0px 11px 5.3px 0px rgba(14, 16, 15, 1)' // Exact shadow from Figma
                         }}
                       >
-                        <div className="flex-shrink-0 text-[26px] mr-2" style={{ color: card.color }}>
+                        <div className="flex-shrink-0 w-[63px] h-[61px] mr-2">
                           {card.icon}
                         </div>
                         <span className="text-[20px] text-[#FAFAFA] font-normal">
