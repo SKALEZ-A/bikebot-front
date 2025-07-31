@@ -66,13 +66,13 @@ const CapabilitiesSection: React.FC<CapabilitiesSectionProps> = () => {
     })
   };
 
-  // Feature cards data with exact positioning from Figma
+  // Feature cards data with star icons from Figma design
   // Using the exact padding values from the Figma layout
   const featureCards = [
     {
       icon: (
         <svg width="63" height="61" viewBox="0 0 63 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M31.5 0L63 15.25V45.75L31.5 61L0 45.75V15.25L31.5 0Z" fill="#FC7B0D"/>
+          <path d="M31.5 0L38.7 19.1L63 19.1L44.15 30.9L51.35 50L31.5 38.2L11.65 50L18.85 30.9L0 19.1L24.3 19.1L31.5 0Z" fill="#FC7B0D" />
         </svg>
       ),
       color: "#FC7B0D", // Orange
@@ -82,7 +82,7 @@ const CapabilitiesSection: React.FC<CapabilitiesSectionProps> = () => {
     {
       icon: (
         <svg width="63" height="61" viewBox="0 0 63 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M31.5 0L63 15.25V45.75L31.5 61L0 45.75V15.25L31.5 0Z" fill="#552396"/>
+          <path d="M31.5 0L38.7 19.1L63 19.1L44.15 30.9L51.35 50L31.5 38.2L11.65 50L18.85 30.9L0 19.1L24.3 19.1L31.5 0Z" fill="#552396" />
         </svg>
       ),
       color: "#552396", // Purple
@@ -92,7 +92,7 @@ const CapabilitiesSection: React.FC<CapabilitiesSectionProps> = () => {
     {
       icon: (
         <svg width="63" height="61" viewBox="0 0 63 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M31.5 0L63 15.25V45.75L31.5 61L0 45.75V15.25L31.5 0Z" fill="#0EAD3A"/>
+          <path d="M31.5 0L38.7 19.1L63 19.1L44.15 30.9L51.35 50L31.5 38.2L11.65 50L18.85 30.9L0 19.1L24.3 19.1L31.5 0Z" fill="#0EAD3A" />
         </svg>
       ),
       color: "#0EAD3A", // Green
@@ -102,7 +102,7 @@ const CapabilitiesSection: React.FC<CapabilitiesSectionProps> = () => {
     {
       icon: (
         <svg width="63" height="61" viewBox="0 0 63 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M31.5 0L63 15.25V45.75L31.5 61L0 45.75V15.25L31.5 0Z" fill="#000000"/>
+          <path d="M31.5 0L38.7 19.1L63 19.1L44.15 30.9L51.35 50L31.5 38.2L11.65 50L18.85 30.9L0 19.1L24.3 19.1L31.5 0Z" fill="#000000" />
         </svg>
       ),
       color: "#000000", // Black
@@ -112,7 +112,7 @@ const CapabilitiesSection: React.FC<CapabilitiesSectionProps> = () => {
     {
       icon: (
         <svg width="63" height="61" viewBox="0 0 63 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M31.5 0L63 15.25V45.75L31.5 61L0 45.75V15.25L31.5 0Z" fill="#FFFFFF"/>
+          <path d="M31.5 0L38.7 19.1L63 19.1L44.15 30.9L51.35 50L31.5 38.2L11.65 50L18.85 30.9L0 19.1L24.3 19.1L31.5 0Z" fill="#FFFFFF" />
         </svg>
       ),
       color: "#FFFFFF", // White
@@ -122,14 +122,14 @@ const CapabilitiesSection: React.FC<CapabilitiesSectionProps> = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="relative bg-black py-20 overflow-hidden min-h-[900px]">
+    <section ref={sectionRef} className={`relative bg-black overflow-hidden ${isMobile ? 'py-16 min-h-[800px]' : 'py-20 min-h-[900px]'}`}>
       {/* 3D Blue Icosahedron - Positioned exactly as in Figma */}
-      <div className="absolute left-0 lg:-left-[150px] top-[120px] lg:top-[180px]">
+      <div className={`absolute ${isMobile ? 'left-1/2 transform -translate-x-1/2 top-[100px]' : 'left-0 lg:-left-[150px] top-[180px]'}`}>
         {/* Blue glow background - Sized to match Figma */}
-        <div className="absolute left-0 top-0 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[600px] lg:h-[600px] rounded-full bg-[rgba(6,12,162,0.25)] blur-[60px] sm:blur-[80px] lg:blur-[120px]"></div>
+        <div className={`absolute left-0 top-0 rounded-full bg-[rgba(6,12,162,0.25)] ${isMobile ? 'w-[200px] h-[200px] blur-[40px] -left-[100px] -top-[100px]' : 'w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[600px] lg:h-[600px] blur-[60px] sm:blur-[80px] lg:blur-[120px]'}`}></div>
 
         {/* 3D Icosahedron - Sized to match Figma */}
-        <div className="relative w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] lg:w-[500px] lg:h-[500px]">
+        <div className={`relative ${isMobile ? 'w-[150px] h-[150px] -ml-[75px]' : 'w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] lg:w-[500px] lg:h-[500px]'}`}>
           <img
             src="/images/blue-icosahedron.png"
             alt="3D Blue Icosahedron"
@@ -143,7 +143,7 @@ const CapabilitiesSection: React.FC<CapabilitiesSectionProps> = () => {
         <div className="flex flex-col items-center">
           {/* Section Title - Exact Figma styling */}
           <motion.h2
-            className="text-[32px] sm:text-[48px] lg:text-[72px] font-inter font-medium leading-[1.1em] mb-20 text-center"
+            className={`font-inter font-medium leading-[1.1em] text-center ${isMobile ? 'text-[28px] mb-12' : 'text-[32px] sm:text-[48px] lg:text-[72px] mb-20'}`}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -163,39 +163,55 @@ const CapabilitiesSection: React.FC<CapabilitiesSectionProps> = () => {
 
           {/* Feature Cards - Positioned to the right of hexagon with proper spacing */}
           <div className="w-full max-w-[1400px] mt-8 relative">
-            <motion.div
-              className="relative"
-              variants={cardContainerVariants}
-              initial="hidden"
-              animate={controls}
-              style={{
-                height: isMobile ? '600px' : '700px',
-                marginLeft: isMobile ? '0' : '400px' // Push cards to the right on desktop to avoid hexagon overlap
-              }}
-            >
-              {/* Dynamically generate feature cards */}
-              {featureCards.map((card, index) => (
-                <motion.div
-                  key={index}
-                  className="absolute top-0 w-full"
-                  custom={index}
-                  variants={cardVariants}
-                >
-                  {/* Apply different styling for mobile and desktop */}
-                  {isMobile ? (
-                    // Mobile layout - centered cards
-                    <div
-                      className="flex items-center gap-4 bg-[#16171A] rounded-[16px] py-3 px-4 mx-auto w-[95%]"
-                    >
-                      <div className="flex-shrink-0 w-[32px] h-[30px] mr-2">
-                        {card.icon}
+            {isMobile ? (
+              // Mobile layout - vertically stacked cards with proper spacing
+              <motion.div
+                className="flex flex-col items-center gap-4 px-4"
+                variants={cardContainerVariants}
+                initial="hidden"
+                animate={controls}
+              >
+                {featureCards.map((card, index) => (
+                  <motion.div
+                    key={index}
+                    className="w-full max-w-[320px]"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="flex items-center gap-4 bg-[#16171A] rounded-[16px] py-4 px-5 w-full">
+                      <div className="flex-shrink-0 w-[40px] h-[38px]">
+                        <svg width="40" height="38" viewBox="0 0 63 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M31.5 0L38.7 19.1L63 19.1L44.15 30.9L51.35 50L31.5 38.2L11.65 50L18.85 30.9L0 19.1L24.3 19.1L31.5 0Z" fill={card.color} />
+                        </svg>
                       </div>
-                      <span className="text-[16px] text-[#FAFAFA] font-normal">
+                      <span className="text-[16px] text-[#FAFAFA] font-normal leading-tight">
                         {card.text}
                       </span>
                     </div>
-                  ) : (
-                    // Desktop layout - staggered cards with increasing left padding, positioned to the right of hexagon
+                  </motion.div>
+                ))}
+              </motion.div>
+            ) : (
+              // Desktop layout - staggered cards with increasing left padding, positioned to the right of hexagon
+              <motion.div
+                className="relative"
+                variants={cardContainerVariants}
+                initial="hidden"
+                animate={controls}
+                style={{
+                  height: '700px',
+                  marginLeft: '400px' // Push cards to the right on desktop to avoid hexagon overlap
+                }}
+              >
+                {featureCards.map((card, index) => (
+                  <motion.div
+                    key={index}
+                    className="absolute top-0 w-full"
+                    custom={index}
+                    variants={cardVariants}
+                  >
                     <div
                       className="flex flex-col"
                       style={{ paddingLeft: card.paddingLeft }} // Apply exact padding from Figma
@@ -216,10 +232,10 @@ const CapabilitiesSection: React.FC<CapabilitiesSectionProps> = () => {
                         </span>
                       </div>
                     </div>
-                  )}
-                </motion.div>
-              ))}
-            </motion.div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            )}
 
             {/* Spacer to maintain section height */}
             <div className="h-[15px] sm:h-[20px] lg:h-[35px]"></div>

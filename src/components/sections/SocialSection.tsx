@@ -9,10 +9,9 @@ interface SocialSectionProps {
 const SocialSection: React.FC<SocialSectionProps> = () => {
   return (
     <section
-      className="relative overflow-hidden"
+      className="relative overflow-hidden lg:min-h-[1061px] min-h-screen"
       style={{
-        background: 'linear-gradient(180deg, #282828 0%, #060606 100%)',
-        minHeight: '1061px'
+        background: 'linear-gradient(180deg, #282828 0%, #060606 100%)'
       }}
       aria-labelledby="social-section-title"
       role="region"
@@ -202,111 +201,116 @@ const SocialSection: React.FC<SocialSectionProps> = () => {
       </div>
 
       {/* Mobile/Tablet Layout */}
-      <div className="lg:hidden relative max-w-6xl mx-auto px-4 py-20">
-        <div className="space-y-16">
+      <div className="lg:hidden relative min-h-screen flex flex-col">
+        {/* Main Content */}
+        <div className="flex-1 max-w-6xl mx-auto px-4 py-20">
+          <div className="space-y-16">
 
-          {/* Mobile Content */}
-          <motion.div
-            className="text-center space-y-8"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            {/* Mobile Title */}
-            <h2
-              className="font-helvetica font-normal text-4xl md:text-6xl leading-tight"
-              style={{
-                background: 'linear-gradient(135deg, #FFFFFF 0%, rgba(255, 255, 255, 0.44) 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
-              }}
-            >
-              Meet the worldwide community.
-            </h2>
-
-            {/* Mobile Description */}
-            <p className="font-dm-sans text-lg md:text-xl leading-relaxed text-white max-w-2xl mx-auto">
-              Join a fast-growing community of Bikeboters and innovators connected all over the world, for faster Monad interaction
-            </p>
-          </motion.div>
-
-          {/* Mobile Social Links */}
-          <div className="space-y-8">
-
-            {/* Mobile Telegram */}
-            <motion.a
-              href="https://t.me/bikebot_xyz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block group"
+            {/* Mobile Content */}
+            <motion.div
+              className="text-center space-y-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.02 }}
             >
-              <div className="flex items-center space-x-6 p-4">
-                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.13-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06-.01.24-.02.38z"
-                      fill="#0088cc"
-                    />
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-dm-sans font-bold text-xl md:text-2xl text-white mb-2">
-                    Telegram
-                  </h3>
-                  <p className="font-dm-sans text-sm md:text-base text-white/70 leading-relaxed">
-                    Join the only Bikebot Telegram Community to get the latest news and updates from across the ecosystem.
-                  </p>
-                </div>
-              </div>
-            </motion.a>
+              {/* Mobile Title */}
+              <h2
+                className="font-helvetica font-normal text-4xl md:text-6xl leading-tight"
+                style={{
+                  background: 'linear-gradient(135deg, #FFFFFF 0%, rgba(255, 255, 255, 0.44) 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
+                Meet the worldwide community.
+              </h2>
 
-            {/* Mobile X (Twitter) */}
-            <motion.a
-              href="https://twitter.com/Bikebot_xyz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="flex items-center space-x-6 p-4">
-                <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 border border-white/20 flex-shrink-0">
-                  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="#D0D0D0">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                  </svg>
+              {/* Mobile Description */}
+              <p className="font-dm-sans text-lg md:text-xl leading-relaxed text-white max-w-2xl mx-auto">
+                Join a fast-growing community of Bikeboters and innovators connected all over the world, for faster Monad interaction
+              </p>
+            </motion.div>
+
+            {/* Mobile Social Links */}
+            <div className="space-y-8">
+
+              {/* Mobile Telegram */}
+              <motion.a
+                href="https://t.me/bikebot_xyz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="flex items-center space-x-6 p-4">
+                  <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.13-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06-.01.24-.02.38z"
+                        fill="#0088cc"
+                      />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-dm-sans font-bold text-xl md:text-2xl text-white mb-2">
+                      Telegram
+                    </h3>
+                    <p className="font-dm-sans text-sm md:text-base text-white/70 leading-relaxed">
+                      Join the only Bikebot Telegram Community to get the latest news and updates from across the ecosystem.
+                    </p>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-dm-sans font-bold text-xl md:text-2xl text-white mb-2">
-                    X (Formerly Twitter)
-                  </h3>
-                  <p className="font-dm-sans text-sm md:text-base text-white/70 leading-relaxed">
-                    Follow @Bikebot_xyz to get the latest news and updates from across the ecosystem.
-                  </p>
+              </motion.a>
+
+              {/* Mobile X (Twitter) */}
+              <motion.a
+                href="https://twitter.com/Bikebot_xyz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="flex items-center space-x-6 p-4">
+                  <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 border border-white/20 flex-shrink-0">
+                    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="#D0D0D0">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-dm-sans font-bold text-xl md:text-2xl text-white mb-2">
+                      X (Formerly Twitter)
+                    </h3>
+                    <p className="font-dm-sans text-sm md:text-base text-white/70 leading-relaxed">
+                      Follow @Bikebot_xyz to get the latest news and updates from across the ecosystem.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </motion.a>
+              </motion.a>
+            </div>
           </div>
+        </div>
 
-          {/* Mobile Footer */}
-          <motion.div
-            className="text-center pt-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
+        {/* Sticky Footer - Always at bottom */}
+        <motion.div
+          className="mt-auto py-8 border-t border-white/10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <div className="max-w-6xl mx-auto px-4">
             <div className="flex items-center justify-center space-x-3">
-              <span className="font-dm-sans text-base md:text-lg text-white">
+              <span className="font-dm-sans text-base md:text-lg text-white/80">
                 Built by - Team BikeBot with
               </span>
               <motion.div
@@ -318,12 +322,12 @@ const SocialSection: React.FC<SocialSectionProps> = () => {
                 </svg>
               </motion.div>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
 
         {/* Mobile Background Sphere - Subtle */}
         <motion.div
-          className="absolute -left-32 top-0 w-64 h-64 opacity-20"
+          className="absolute -left-32 top-0 w-64 h-64 opacity-20 pointer-events-none"
           animate={{
             rotate: [0, 360]
           }}

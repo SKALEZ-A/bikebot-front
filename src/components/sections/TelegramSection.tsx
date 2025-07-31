@@ -119,7 +119,16 @@ const TelegramSection: React.FC<TelegramSectionProps> = () => {
                 <img
                   src="/images/telegram-interface-figma.png"
                   alt="Telegram Bot Interface"
-                  className="w-full h-full object-contain"
+                  className="max-w-full max-h-full object-contain"
+                  style={{ 
+                    transform: 'rotate(-5deg) scale(1)',
+                    objectFit: 'contain',
+                    objectPosition: 'center',
+                    display: 'block',
+                    margin: 'auto',
+                    width: 'auto',
+                    height: 'auto'
+                  }}
                 />
               </div>
 

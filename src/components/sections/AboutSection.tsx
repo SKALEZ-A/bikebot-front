@@ -62,13 +62,13 @@ const AboutSection: React.FC<AboutSectionProps> = ({
                     
                     {/* Text Content */}
                     <div className="flex-1 space-y-6">
-                      <p className="text-figma-body-medium font-inter text-figma-text-secondary leading-relaxed">
+                      <p className="text-sm leading-relaxed md:text-figma-body-medium md:leading-relaxed font-inter text-figma-text-secondary">
                         {description}
                       </p>
                       
                       {/* Mission Statement */}
                       <div className="border-l-4 border-figma-orange pl-6">
-                        <p className="text-figma-body-medium font-inter text-figma-light-gray leading-relaxed italic">
+                        <p className="text-sm leading-relaxed md:text-figma-body-medium md:leading-relaxed font-inter text-figma-light-gray italic">
                           Our mission is to bridge the gap between decentralized infrastructure and user-friendly tools, 
                           making Web3 access as easy as sending a message. Built for speed, optimized for Monad, 
                           and powered by community feedback — BikeBot is your gateway to blockchain interaction, reimagined.
